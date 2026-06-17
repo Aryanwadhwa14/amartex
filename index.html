@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Amartex - Online Grocery & Retail</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <div class="app-container">
+        
+                <header class="main-header">
+            <div class="header-top">
+                <div class="location-box">
+                    <div class="brand-logo">Amartex</div>
+                    <div class="location-select" onclick="toggleLocation()">
+                        <span>Home</span> - Punchkula <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="profile-icon">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+            </div>
+            
+            <div class="search-bar-container">
+                <input type="text" placeholder="Search Product..." id="productSearch">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+
+                        <div class="quick-categories">
+                <div class="quick-cat-item active" onclick="selectCategory('All')">
+                    <div class="icon-circle"><i class="fa-solid fa-border-all"></i></div>
+                    <span>All</span>
+                </div>
+                <div class="quick-cat-item" onclick="selectCategory('Beauty')">
+                    <div class="icon-circle"><i class="fa-solid fa-gem"></i></div>
+                    <span>Beauty</span>
+                </div>
+                <div class="quick-cat-item" onclick="selectCategory('Grocery')">
+                    <div class="icon-circle"><i class="fa-solid fa-basket-shopping"></i></div>
+                    <span>Grocery</span>
+                </div>
+                <div class="quick-cat-item" onclick="selectCategory('Electronics')">
+                    <div class="icon-circle"><i class="fa-solid fa-headphones"></i></div>
+                    <span>Electronics</span>
+                </div>
+                <div class="quick-cat-item" onclick="selectCategory('50% Off')">
+                    <div class="icon-circle"><i class="fa-solid fa-percent"></i></div>
+                    <span>50% Off</span>
+                </div>
+                <div class="quick-cat-item" onclick="selectCategory('Fashion')">
+                    <div class="icon-circle"><i class="fa-solid fa-shirt"></i></div>
+                    <span>Fashion</span>
+                </div>
+            </div>
+        </header>
+
+                <main class="content-body">
+            
+                        <section class="hero-banner">
+                <a href="#"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" alt="Summer Best Sale" class="hero-img"></a>
+                <div class="hero-overlay">
+                    <span class="badge">Summer</span>
+                    <h2>BEST SALE</h2>
+                </div>
+            </section>
+
+                        <section class="hot-deals-section">
+                <div class="hot-deals-header">
+                    <h3>TODAY'S HOT DEALS</h3>
+                    <span class="sub-tag">UP TO 50% OFF</span>
+                </div>
+                
+                <div class="deals-grid-3x">
+                    <div class="deal-card tile-blue">
+                        <h4>Electronics & gadgets</h4>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?q=80&w=721&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Electronics"></a>
+                        <span class="deal-pill">UP TO 25% OFF</span>
+                    </div>
+                    <div class="deal-card tile-blue">
+                        <h4>Pantry Essentials</h4>
+                        <a href="#"><img src="https://images.unsplash.com/photo-1615897570582-285ffe259530?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pantry"></a>
+                        <span class="deal-pill">UP TO 30% OFF</span>
+                    </div>
+                    <div class="deal-card tile-blue">
+                        <h4>Home & Kitchen</h4>
+                        <a href="#"><img src="https://media.istockphoto.com/id/1255227319/photo/happy-family-in-the-kitchen-stock-photo.jpg?s=1024x1024&w=is&k=20&c=LkQp4dD10XdkQ2qCnyBRpz5yalvDRHNhcNjoUoRU8Oo=" alt="Kitchen"></a>
+                        <span class="deal-pill">UP TO 20% OFF</span>
+                    </div>
+                </div>
+            </section>
+
+                        <section class="product-shelf mega-drop">
+                <div class="shelf-header">
+                    <h3>Mega Price Drop</h3>
+                    <div class="basket-decor">🛒</div>
+                </div>
+                
+                <div class="product-row">
+                                        <div class="product-card" data-prod-id="1">
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="img-wrapper">
+                            <a href="#"><img src="https://m.media-amazon.com/images/I/81mHz4XKK0L._SX569_.jpg" alt="India Gate Basmati Rice"></a>
+                        </div>
+                        <div class="price-line">
+                            <span class="curr-price">₹686.52</span>
+                            <span class="old-price">₹810.00</span>
+                        </div>
+                        <h4 class="prod-title">India Gate Basmati Rice Mogra</h4>
+                        <div class="weight-selector" onclick="openVariantSheet('India Gate Basmati Rice', ['10kg', '5kg', '1kg'])">
+                            <span class="selected-wt">10kg</span> <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="modifyCart(1, 1)"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+
+                                        <div class="product-card" data-prod-id="2">
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="img-wrapper">
+                            <a href="#"><img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRZtsDo-ZDmmelQ07gHWNc2-Z35tvTNRymbV019XbgfcEagyRWEevSQkrpoaoHbi493DBqn6Efffi3XjaESK2cMi_dzsPLDR2dANIzQic2fBYbCtUnOi2SR" alt="Fortune Soyabean Oil"></a>
+                        </div>
+                        <div class="price-line">
+                            <span class="curr-price">₹96.00</span>
+                            <span class="old-price">₹128.00</span>
+                        </div>
+                        <h4 class="prod-title">Fortune Refined Soyabean Oil</h4>
+                        <div class="weight-selector" onclick="openVariantSheet('Fortune Refined Soyabean Oil', ['1 ltr', '5 ltr'])">
+                            <span class="selected-wt">1 ltr</span> <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="modifyCart(2, 1)"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+
+                                        <div class="product-card" data-prod-id="3">
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="img-wrapper">
+                            <a href="#"><img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-470,ar-1501-1501,pr-true,f-auto,q-40,dpr-2/cms/product_variant/f880d128-4d9d-4980-ad1f-a77bb3bcd9aa/Saffola-Gold-Oil-Power-of-3-Pouch.jpeg" alt="Saffola Gold"></a>
+                        </div>
+                        <div class="price-line">
+                            <span class="curr-price">₹405.50</span>
+                            <span class="old-price">₹495.00</span>
+                        </div>
+                        <h4 class="prod-title">Saffola Gold Edible Oil... Can</h4>
+                        <div class="weight-selector" onclick="openVariantSheet('Saffola Gold Edible Oil', ['2 ltr', '5 ltr'])">
+                            <span class="selected-wt">2 ltr</span> <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="modifyCart(3, 1)"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+                <button class="see-all-bar" onclick="seeAll('Mega Price Drop')">See all <i class="fa-solid fa-caret-right"></i></button>
+            </section>
+
+                        <section class="promo-split-grid">
+                <div class="promo-card clean-green">
+                    <h3>Lowest Prices Everyday</h3>
+                    <p>With best Deals</p>
+                    <button class="action-btn-pill" onclick="seeAll('Lowest Prices')">Shop Now</button>
+                </div>
+                <div class="promo-card vibrant-orange">
+                    <h3>Everything You Need</h3>
+                    <p>All in one Place</p>
+                    <button class="action-btn-pill black-btn" onclick="seeAll('Pantry Basics')">Shop Here</button>
+                </div>
+            </section>
+
+                        <section class="product-shelf">
+                <div class="shelf-header">
+                    <h3>Cooking essentials</h3>
+                </div>
+                
+                <div class="product-grid-2x2">
+                                        <div class="product-card" data-prod-id="4">
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="img-wrapper"><a href="#"><img src="https://m.media-amazon.com/images/I/614mm2hYHyL._SX569_.jpg" alt="Tata Salt"></a></div>
+                        <div class="price-line"><span class="curr-price">₹52.20</span> <span class="old-price">₹62.00</span></div>
+                        <div class="discount-badge">10% OFF</div>
+                        <h4 class="prod-title">Tata Salt Vacuum Packed</h4>
+                        <div class="weight-selector" onclick="openVariantSheet('Tata Salt Vacuum Packed', ['1 kg'])">
+                            <span class="selected-wt">1 kg</span> <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="rating-row"><i class="fa-solid fa-star"></i> 4.5 <span>(35.4k)</span></div>
+                        <button class="add-to-cart-btn" onclick="modifyCart(4, 1)"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+
+                                        <div class="product-card" data-prod-id="5">
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="img-wrapper"><a href="#"><img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRZtsDo-ZDmmelQ07gHWNc2-Z35tvTNRymbV019XbgfcEagyRWEevSQkrpoaoHbi493DBqn6Efffi3XjaESK2cMi_dzsPLDR2dANIzQic2fBYbCtUnOi2SR" alt="Oil"></a></div>
+                        <div class="price-line"><span class="curr-price">₹149.00</span> <span class="old-price">₹184.00</span></div>
+                        <div class="discount-badge">5% OFF</div>
+                        <h4 class="prod-title">Fortune Refined Soyabean Oil</h4>
+                        <div class="weight-selector" onclick="openVariantSheet('Fortune Refined Soyabean Oil', ['750 ml', '1 ltr'])">
+                            <span class="selected-wt">750 ml</span> <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="rating-row"><i class="fa-solid fa-star"></i> 4.5 <span>(35k)</span></div>
+                        <button class="add-to-cart-btn" onclick="modifyCart(5, 1)"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+
+                                        <div class="product-card" data-prod-id="6">
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="img-wrapper"><a href="#"><img src="https://www.bbassets.com/media/uploads/p/l/40202316_7-aashirvaad-natures-super-foods-organic-atta.jpg" alt="Atta"></a></div>
+                        <div class="price-line"><span class="curr-price">₹447.00</span> <span class="old-price">₹502.00</span></div>
+                        <div class="discount-badge">5% OFF</div>
+                        <h4 class="prod-title">Aashirvaad Whole Wheat Atta</h4>
+                        <div class="weight-selector" onclick="openVariantSheet('Aashirvaad Whole Wheat Atta', ['10kg', '5kg'])">
+                            <span class="selected-wt">10kg</span> <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="rating-row"><i class="fa-solid fa-star"></i> 4.5 <span>(28.4k)</span></div>
+                        <button class="add-to-cart-btn" onclick="modifyCart(6, 1)"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+                <button class="see-all-bar container-styled" onclick="seeAll('Cooking essentials')">See all <i class="fa-solid fa-caret-right"></i></button>
+            </section>
+
+                        <section class="banner-highlight" onclick="seeAll('Deals You Love')">
+                <div class="highlight-content">
+                    <h2>Deals You'll Love</h2>
+                    <button class="shop-now-pill-red">Shop Now</button>
+                </div>
+            </section>
+
+                                    <section class="grouped-categories">
+                <h3>Grocery & kicthen</h3>
+                <div class="cat-circle-grid">
+                    <div class="cat-circle-card" onclick="selectCategory('Atta, Rice & Dal')">
+                        <div class="square-img-box"><a href="#"><img src="https://www.bbassets.com/media/uploads/p/l/40202316_7-aashirvaad-natures-super-foods-organic-atta.jpg" alt="Atta"></a></div>
+                        <span>Atta, Rice & Dal</span>
+                    </div>
+                    <div class="cat-circle-card" onclick="selectCategory('Masalas')">
+                        <div class="square-img-box"><a href="#"><img src="https://www.bbassets.com/media/uploads/p/xl/40009488_9-patanjali-garam-masala-powder.jpg" alt="Masala"></a></div>
+                        <span>Masalas</span>
+                    </div>
+                    <div class="cat-circle-card" onclick="selectCategory('Oils & Ghee')">
+                        <div class="square-img-box"><a href="#"><img src="https://www.bbassets.com/media/uploads/p/l/104864-2_2-amul-butter-pasteurised.jpg" alt="Ghee"></a></div>
+                        <span>Oils & Ghee</span>
+                    </div>
+                    <div class="cat-circle-card" onclick="selectCategory('Tea & Coffee')">
+                        <div class="square-img-box"><a href="#"><img src="https://m.media-amazon.com/images/I/61n-QGNfT1L._AC_UF894,1000_QL80_.jpg" alt="Tea"></a></div>
+                        <span>Tea & Coffee</span>
+                    </div>
+                </div>
+            </section>
+
+                        <section class="grouped-categories">
+                <h3>Snacks & drinks</h3>
+                <div class="cat-circle-grid">
+                    <div class="cat-circle-card" onclick="selectCategory('Cold Drinks & Juices')">
+                        <div class="square-img-box"><a href="#"><img src="https://wallpapers.com/images/hd/assorted-soft-drinks-collection-0bssdibxr7paa77c.png" alt="Soda"></a></div>
+                        <span>Cold Drinks & Juices</span>
+                    </div>
+                    <div class="cat-circle-card" onclick="selectCategory('Chips & Namkeens')">
+                        <div class="square-img-box"><a href="#"><img src="https://www.lemorfoods.com/cdn/shop/files/2_5357fe1f-d485-42eb-bd1f-d3f92e17a216_1024x.jpg?v=1690277567" alt="Chips"></a></div>
+                        <span>Chips & Namkeens</span>
+                    </div>
+                    <div class="cat-circle-card" onclick="selectCategory('Chocolates & Cakes')">
+                        <div class="square-img-box"><a href="#"><img src="https://m.media-amazon.com/images/I/71k-8kBAi4L._AC_UF894,1000_QL80_.jpg" alt="Chocolates"></a></div>
+                        <span>Chocolates & Cakes</span>
+                    </div>
+                    <div class="cat-circle-card" onclick="selectCategory('Bakery')">
+                        <div class="square-img-box"><a href="#"><img src="https://m.media-amazon.com/images/I/61Y4Uthj9nL.png" alt="Bakery"></a></div>
+                        <span>Bakery</span>
+                    </div>
+                </div>
+            </section>
+
+                        <section class="grouped-categories">
+                <h3>Personal care & beauty</h3>
+                <div class="cat-circle-grid">
+                    <div class="cat-circle-card" onclick="selectCategory('Skin Care')">
+                        <div class="square-img-box"><a href="#"><img src="https://m.media-amazon.com/images/I/71XZXuS-lbL._AC_UF894,1000_QL80_.jpg" alt="Skin"></a></div>
+                        <span>Skin Care</span>
+                    </div>
+                    <div class="cat-circle-card" onclick="selectCategory('Feminine Hygiene')">
+                        <div class="square-img-box"><a href="#"><img src="https://m.media-amazon.com/images/I/71mYGRTCV5L.AC_SX500.jpg" alt="Feminine"></a></div>
+                        <span>Feminine Hygiene</span>
+                    </div>
+                    <div class="cat-circle-card" onclick="selectCategory('Oral Care')">
+                        <div class="square-img-box"><a href="#"><img src="https://m.media-amazon.com/images/I/61hohDKfApL._AC_UF1000,1000_QL80_.jpg" alt="Oral"></a></div>
+                        <span>Oral Care</span>
+                    </div>
+                    <div class="cat-circle-card" onclick="selectCategory('Hair Care')">
+                        <div class="square-img-box"><a href="#"><img src="https://m.media-amazon.com/images/I/41FuYOPyb7L._SY300_SX300_QL70_FMwebp_.jpg" alt="Hair"></a></div>
+                        <span>Hair Care</span>
+                    </div>
+                </div>
+            </section>
+
+                        <section class="health-footer-banner">
+                <div class="footer-hero-box">
+                    <div class="logo-small">Amartex</div>
+                    <h3>Health Choices<br>Happier Life</h3>
+                    <p>Everyday essentials for healthy living</p>
+                    <button class="health-today-btn" onclick="alert('Opening healthy items catalogue')">Health Today</button>
+                </div>
+                <div class="footer-hero-avatar">
+                    <a href="#"><img src="https://static01.nyt.com/images/2018/05/08/well/physed-happiness/physed-happiness-superJumbo.jpg" alt="Healthy Lifestyle User"></a>
+                </div>
+            </section>
+
+        </main>
+
+                <nav class="floating-nav-bar">
+            <div class="nav-item active" onclick="switchNav(this, 'home')">
+                <i class="fa-solid fa-house nav-icon"></i>
+                <span class="nav-label">Home</span>
+            </div>
+            <div class="nav-divider"></div>
+            <div class="nav-item" onclick="switchNav(this, 'categories')">
+                <i class="fa-solid fa-layer-group nav-icon"></i>
+                <span class="nav-label">Categories</span>
+            </div>
+            <div class="nav-divider"></div>
+            <div class="nav-item cart-nav" onclick="switchNav(this, 'cart')">
+                <div class="cart-icon-wrapper">
+                    <i class="fa-solid fa-cart-shopping nav-icon"></i>
+                    <span class="cart-badge-count" id="globalCartCount">0</span>
+                </div>
+                <span class="nav-label">My Cart</span>
+            </div>
+            <div class="nav-divider"></div>
+            <div class="nav-item support-action-pill" onclick="openSupportChannel()">
+                <div class="support-inner">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <span>Support</span>
+                </div>
+            </div>
+        </nav>
+
+                <div class="variant-bottom-sheet" id="variantSheet">
+            <div class="sheet-backdrop" onclick="closeVariantSheet()"></div>
+            <div class="sheet-content">
+                <h3 id="variantSheetTitle">Select Option</h3>
+                <div class="variants-list" id="variantsContainer"></div>
+            </div>
+        </div>
+
+    </div>
+
+        <script src="app.js"></script>
+</body>
+</html>
